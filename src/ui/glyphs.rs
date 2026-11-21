@@ -35,10 +35,8 @@ pub const EXPLORE: &[u8] = include_bytes!("../../assets/icon/glyphs/explore.png"
 pub const LIBRARY: &[u8] = include_bytes!("../../assets/icon/glyphs/library.png");
 pub const SEARCH: &[u8] = include_bytes!("../../assets/icon/glyphs/search.png");
 pub const DOWNLOAD: &[u8] = include_bytes!("../../assets/icon/glyphs/download.png");
-pub const USERS: &[u8] = include_bytes!("../../assets/icon/glyphs/users.png");
 pub const SETTINGS: &[u8] = include_bytes!("../../assets/icon/glyphs/settings.png");
 pub const PERSON_CIRCLE: &[u8] = include_bytes!("../../assets/icon/glyphs/person_circle.png");
-pub const MENU: &[u8] = include_bytes!("../../assets/icon/glyphs/menu.png");
 pub const SPARKLES: &[u8] = include_bytes!("../../assets/icon/glyphs/sparkles.png");
 pub const WAVE: &[u8] = include_bytes!("../../assets/icon/glyphs/wave.png");
 

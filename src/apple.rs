@@ -18,11 +18,10 @@ const STOREFRONT: &str = "us";
 const WEB_PLAYER: &str = "https://music.apple.com/us/browse";
 const UA: &str = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36";
 
-/// Motion clips for one release: square for sleeves, wide for hero banners.
+/// Motion clips for one release: square for sleeves.
 #[derive(Clone, Debug, Default)]
 pub struct Motion {
     pub square: Option<String>,
-    pub wide: Option<String>,
 }
 
 /// Apple's own page for an artist: their display name and wordmark.
@@ -319,8 +318,7 @@ fn motion_urls(video: &Value) -> Motion {
             .map(str::to_owned)
     };
     let square = link("motionDetailSquare").or_else(|| link("motionSquareVideo1x1")).or_else(|| link("motionDetailRaw"));
-    let wide = link("motionDetailTall").or_else(|| link("motionTallVideo3x4"));
-    Motion { square, wide }
+    Motion { square }
 }
 
 fn album_id(hit: &Value) -> Option<String> {
